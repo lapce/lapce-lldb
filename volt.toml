@@ -1,5 +1,5 @@
 name = "lapce-lldb"
-version = "0.1.0"
+version = "0.1.1"
 display-name = "Lapce LLDB"
 author = "dzhou121"
 description = "A debugger powered by LLDB."

@@ -1,0 +1,14 @@
+name = "lapce-lldb"
+version = "0.1.0"
+display-name = "Lapce LLDB"
+author = "dzhou121"
+description = "A debugger powered by LLDB."
+repository = "https://github.com/lapce/lapce-lldb"
+wasm = "lapce-lldb.wasm"
+
+[activation]
+workspace-contains = ["*"]
+
+[config.serverPath]
+default = ""
+description = "Path to lldb-vscode executable."

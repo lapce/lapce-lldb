@@ -63,17 +63,17 @@ fn initialize(params: InitializeParams) -> Result<()> {
     }
 
     let exits = PLUGIN_RPC
-        .execute_process(program.to_string(), vec!["lldb-vscode".to_string()])
+        .execute_process(program.to_string(), vec!["lldb-dap".to_string()])
         .map(|r| r.success)
         .unwrap_or(false);
     if !exits {
         PLUGIN_RPC.window_show_message(
             MessageType::ERROR,
-            "lldb-vscode couldn't be found, please install or configure the path".to_string(),
+            "lldb-dap (formerly lldb-vscode) couldn't be found, please install or configure the path".to_string(),
         );
         return Ok(());
     }
-    PLUGIN_RPC.register_debugger_type("lldb".to_string(), "lldb-vscode".to_string(), None)?;
+    PLUGIN_RPC.register_debugger_type("lldb".to_string(), "lldb-dap".to_string(), None)?;
 
     Ok(())
 }
